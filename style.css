@@ -1,0 +1,36 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #1b1b1b;
+}
+
+#search-container {
+    position: absolute; /* Or use 'fixed' if you want it to stay in place on scroll */
+    top: 0;
+    right: 0;
+    padding: 10px;
+}
+
+#searchInput {
+    padding: 8px 10px;
+    margin-right: 4px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Style for the search button */
+#searchButton {
+    padding: 8px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Change button color on hover */
+#searchButton:hover {
+    background-color: #0056b3;
+}
