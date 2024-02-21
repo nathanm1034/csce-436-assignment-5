@@ -1,16 +1,36 @@
-let button, img;
+let button, button_loadPerson, img, img2;
 
 function preload() {
-  img = loadImage('assets/egg.jpg');
+  img = loadImage("assets/egg.jpg"); // Image of Eggs in Assets dir
+  img2 = loadImage("assets/ai_person.png");
 }
 
 function setup() {
-  createCanvas(400, 800);
-  button = createButton('click me');
-  button.position(19, 19);
+  createCanvas(1600, 1600);
+
+  button = createButton("click me");
+  button.position(0, 0);
   button.mousePressed(loadCamera);
+
+  button_loadPerson = createButton(
+    "Click to load a person of a AI Generated Person.",
+  );
+  button_loadPerson.position(0, 20);
+  button_loadPerson.mousePressed(loadPic);
 }
 
-function loadCamera(){
+function draw() {
+  if (mouseIsPressed === true) {
+    cursor(ARROW);
+  } else {
+    cursor(HAND);
+  }
+}
+
+function loadCamera() {
   image(img, 100, 0);
+}
+
+function loadPic() {
+  image(img2, 20, 0);
 }
